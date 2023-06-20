@@ -42,7 +42,7 @@ Lustre file system of which the userid connecting is not the owner.
 The version number (2.5.0 in June 2023, released back in 2014) also suggests that the macOS implementation
 is derived from an ancient version of the Linux sshfs implementation (which stopped at version 3.7.3).
 
-There is a form that saw [development as recent as the summer of 2022](https://github.com/tormodwill/macSSHFS)
+There is a fork that saw [development as recent as the summer of 2022](https://github.com/tormodwill/macSSHFS)
 (at the time of writing in June 2023) but that fork also is still derived 
 from a rather old version of the Linux sshfs implementation and hence may not solve all problems with 
 the implementation by the macFUSE project. According to the README file this is because the macFUSE 
