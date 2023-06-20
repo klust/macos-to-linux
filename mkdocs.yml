@@ -20,6 +20,11 @@ nav:
   - Introduction: 0_00_introduction.md
   - Protocols and technologies:
     - 1_ProtocolsTechnologies/index.md
+  - Enhancing macOS:
+    - 2_UNIX_Environment/index.md
+  - Software:
+    - 3_Software/index.md
+    - SSHFS file access: 3_Software/3_03_SSHFS.md
 
 
 plugins:
