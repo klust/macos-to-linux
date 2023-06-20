@@ -15,4 +15,19 @@
          <lastmod>2023-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://klust.github.io/macos-to-linux/2_UNIX_Environment/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/macos-to-linux/3_Software/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/macos-to-linux/3_Software/3_03_SSHFS/</loc>
+         <lastmod>2023-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>

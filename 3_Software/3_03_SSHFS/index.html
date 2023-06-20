@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://klust.github.io/macos-to-linux/">
+        <link rel="canonical" href="https://klust.github.io/macos-to-linux/3_Software/3_03_SSHFS/">
       
       
+        <link rel="prev" href="../">
       
-        <link rel="next" href="0_00_introduction/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
-        <title>Connecting from macOS to Linux</title>
+        <title>SSHFS file access - Connecting from macOS to Linux</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -42,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-windows-as-a-client-and-development-platform-for-hpc" class="md-skip">
+        <a href="#sshfs-on-macos" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Connecting from macOS to Linux" class="md-header__button md-logo" aria-label="Connecting from macOS to Linux" data-md-component="logo">
+    <a href="../.." title="Connecting from macOS to Linux" class="md-header__button md-logo" aria-label="Connecting from macOS to Linux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              SSHFS file access
             
           </span>
         </div>
@@ -181,7 +181,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Connecting from macOS to Linux" class="md-nav__button md-logo" aria-label="Connecting from macOS to Linux" data-md-component="logo">
+    <a href="../.." title="Connecting from macOS to Linux" class="md-nav__button md-logo" aria-label="Connecting from macOS to Linux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -198,21 +198,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
-      
     </li>
   
 
@@ -225,7 +215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="0_00_introduction/" class="md-nav__link">
+      <a href="../../0_00_introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -258,7 +248,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="1_ProtocolsTechnologies/">Protocols and technologies</a>
+          <a href="../../1_ProtocolsTechnologies/">Protocols and technologies</a>
           
         </div>
       
@@ -303,7 +293,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="2_UNIX_Environment/">Enhancing macOS</a>
+          <a href="../../2_UNIX_Environment/">Enhancing macOS</a>
           
         </div>
       
@@ -328,14 +318,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
         
@@ -350,7 +342,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="3_Software/">Software</a>
+          <a href="../">Software</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -358,7 +350,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Software
@@ -371,11 +363,65 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="3_Software/3_03_SSHFS/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SSHFS file access
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         SSHFS file access
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#open-source-implementation-based-on-macfuse" class="md-nav__link">
+    Open-source implementation based on macFUSE
+  </a>
+  
+    <nav class="md-nav" aria-label="Open-source implementation based on macFUSE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commercial-implementations" class="md-nav__link">
+    Commercial implementations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -407,6 +453,34 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#open-source-implementation-based-on-macfuse" class="md-nav__link">
+    Open-source implementation based on macFUSE
+  </a>
+  
+    <nav class="md-nav" aria-label="Open-source implementation based on macFUSE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commercial-implementations" class="md-nav__link">
+    Commercial implementations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -420,14 +494,98 @@
                   
 
 
-<h1 id="using-windows-as-a-client-and-development-platform-for-hpc">Using Windows as a client and development platform for HPC<a class="headerlink" href="#using-windows-as-a-client-and-development-platform-for-hpc" title="Permanent link">&para;</a></h1>
+<h1 id="sshfs-on-macos">SSHFS on macOS<a class="headerlink" href="#sshfs-on-macos" title="Permanent link">&para;</a></h1>
+<p>SSHFS is a way to mount a remote file system over ssh. Under the hood it talks to 
+the ssh/sftp daemon on the server and sends commands to download or upload files when
+needed.</p>
+<p>It is not a true network file system so you have to be careful not to change files
+on both sides of the connection simultaneously. It does not offer any protection
+against this, e.g., full or partial file locking. Modifying files directly on 
+the server and on a mounted volume simultaneously will lead to unpredictable results.</p>
+<p>On Linux, where it was first introduced, sshfs is a userspace file system. So one needs
+tp first install a piece of software called <a href="https://www.kernel.org/doc/html/next/filesystems/fuse.html">FUSE</a>
+to support user space file systems, and then the software that provides sshfs. 
+Implementations on other operating systems often follow a similar approach.</p>
+<p>Note however that at the time of writing of this text (June 2023) the
+<a href="https://github.com/libfuse/sshfs">Linux sshfs project</a> is without maintainer, though there are
+some forks in which further development seems to be happening. If no new maintainer is
+found, it is rather likely that sshfs will be abandoned by Linux distributions as security bugs
+are no longer fixed, and it is unclear what the future is of ports to other operating systems.</p>
+<h2 id="open-source-implementation-based-on-macfuse">Open-source implementation based on macFUSE<a class="headerlink" href="#open-source-implementation-based-on-macfuse" title="Permanent link">&para;</a></h2>
+<p>There is a command line open source implementation for macOS that follows the principles also
+used on Linux, as part of the <a href="https://osxfuse.github.io/">macFUSE (previously OSXFuse) project</a>.</p>
+<p>Installation is done in two parts. First a 
+<a href="https://github.com/osxfuse/osxfuse/releases">recent version of macFUSE</a> 
+has to be installed. 
+The implementation at the time of writing (June 2023) still relies on kernel extensions, a mechanism 
+that Apple wants to get rid off due to security concerns, and which requires relaxing security
+settings on Apple Silicon macs. It is to be expected that this implementation will stop working on 
+a future version of macOS. </p>
+<p>Next one can <a href="https://github.com/osxfuse/osxfuse/releases">install SSHFS</a>. SSHFS hasn't been maintained
+since 2014 and our experience is that it does not always work well anymore. E.g., when connecting to 
+LUMI, a Cray EX system running SUSE Linux, it fails to follow symbolic links to directories on the 
+Lustre file system of which the userid connecting is not the owner.</p>
+<p>The version number (2.5.0 in June 2023, released back in 2014) also suggests that the macOS implementation
+is derived from an ancient version of the Linux sshfs implementation (which stopped at version 3.7.3).</p>
+<p>There is a form that saw <a href="https://github.com/tormodwill/macSSHFS">development as recent as the summer of 2022</a>
+(at the time of writing in June 2023) but that fork also is still derived 
+from a rather old version of the Linux sshfs implementation and hence may not solve all problems with 
+the implementation by the macFUSE project. According to the README file this is because the macFUSE 
+project does not offer support for the newer libfuse 3 API.</p>
+<details class="note">
+<summary>Links</summary>
 <ul>
-<li><a href="0_00_introduction">Introduction</a></li>
-<li><a href="https://klust.github.io/windows-client-HPC/1_ProtocolsTechnologies/">Protocols and technologies (on other site)</a></li>
-<li><a href="2_UNIX_Environment/">Enhancing the macOS environment</a></li>
-<li><a href="3_Software/">Software</a><ul>
-<li><a href="3_Software/3_03_SSHFS/">File access via SSHFS</a></li>
+<li><a href="">macFUSE GitHub repository</a></li>
+<li><a href="https://github.com/osxfuse/sshfs">sshfs in the macFUSE proejct GitHub repository</a></li>
+<li><a href="https://github.com/tormodwill/macSSHFS">A forkof the macFUSE sshfs implementation</a></li>
 </ul>
+</details>
+<h3 id="commercial-implementations">Commercial implementations<a class="headerlink" href="#commercial-implementations" title="Permanent link">&para;</a></h3>
+<p>Below is just a selection of applications. The list doesn't aim to be complete.</p>
+<ul>
+<li>
+<p><a href="https://mountainduck.io/">Mountain Duck</a> is a package from the developers of
+    CyberDuck that supports not only the sftp protocol (on which sshfs implementations
+    are based) but also several cloud storage technologies, including S3. Contrary to
+    CyberDuck it also allows to mount volumes and claims to use smart synchronization
+    that also enables offline work. It supports both Windows and macOS.</p>
+<p>It does not use the macOS File PRovider API, because - as they claim - the latter
+can only cache in <code>~/Library/CloudStorage</code> and not on external drives which may be
+needed for larger volumes.</p>
+<p>There is native support for Apple Silicon.</p>
+</li>
+<li>
+<p><a href="https://www.expandrive.com/">ExpanDrive</a> provides two products that both support more
+    than just sshfs-like access:</p>
+<ul>
+<li>
+<p><a href="https://www.expandrive.com/strongsync/">Strongsync</a> is their newer implementation 
+    using the macOS File Provider API. It does not need any kernel extension and offers
+    native support for Apple Silicon machines. It is the preferred implementation for
+    newer macOS machines but is not yet as complete in its support for other cloud
+    storage technologies as the next product.</p>
+</li>
+<li>
+<p><a href="https://www.expandrive.com/desktop/">ExpanDrive</a> is the older product that is also
+    available for Windows and Linux. It offers support for a huge array of cloud services
+    and includes support for Amazon S3. It looks like it still uses a kernel extension though
+    on macOS that provides FUSE functionality (certainly older versions did).</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.netdrive.net/">NetDrive</a> is a commercial package for Windows and macOS that does not
+    only support SSHFS but can also mount several other types of cloud storage as if it is a local file
+    system, including, e.g., S3. There is a personal version which is still relatively cheap, but the
+    team version which is needed to offer full privacy also on multi-user PCs is rather expensive to
+    academic standards.</p>
+</li>
+<li>
+<p><a href="https://www.nsoftware.com/sftpdrive/">/n software SFTP Drive</a> also supports macOS besides Windows and Linux.</p>
+</li>
+<li>
+<p><a href="https://cloudmounter.net/sftp-client-mac.html">CloudMounter</a> is another package enabling mounting from an
+    sftp server, and it too supports some other cloud storage technologies. It also exists in a version for Windows.</p>
 </li>
 </ul>
 
@@ -498,10 +656,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
       
     
   </body>
