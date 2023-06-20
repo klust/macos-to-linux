@@ -1,0 +1,54 @@
+site_name: "Connecting from macOS to Linux"
+site_url: https://klust.github.io/macos-to-linux
+site_dir: "site/macos-to-linux"
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    #- navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - header.autohide
+    - toc.follow
+  palette:
+    - primary: black
+
+nav:
+  - Home: index.md
+  - Introduction: 0_00_introduction.md
+  - Protocols and technologies:
+    - 1_ProtocolsTechnologies/index.md
+
+
+plugins:
+  # show revision date at bottom of each page
+  - git-revision-date-localized
+  # necessary for search to work
+  - search
+
+markdown_extensions:
+  # notes, warnings, hints, ...
+  - admonition
+  # code blocks with syntax highlighting, graphs
+  - pymdownx.superfences:
+        custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # clickable details
+  - pymdownx.details
+  # tabbed contents
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+
+extra:
+  # add links in bottom right
+  social:
+    #- type: github
+    #  icon: octicons/logo-github
+    #  link: https://github.com/klust
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UC3szWMS7glcfWsEZTZXQ1oQ
