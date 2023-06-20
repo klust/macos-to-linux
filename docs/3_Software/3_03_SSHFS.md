@@ -46,7 +46,9 @@ There is a fork that saw [development as recent as the summer of 2022](https://g
 (at the time of writing in June 2023) but that fork also is still derived 
 from a rather old version of the Linux sshfs implementation and hence may not solve all problems with 
 the implementation by the macFUSE project. According to the README file this is because the macFUSE 
-project does not offer support for the newer libfuse 3 API.
+project does not offer support for the newer libfuse 3 API. Testing does show though that at least
+some problems with the 2.5.0 implementation are not present in this version (and in particular
+the problem mentioned when following links).
 
 
 ??? Note "Links"
