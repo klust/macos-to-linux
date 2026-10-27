@@ -1,13 +1,13 @@
 all: preview
 
 build:
-	mkdocs build
+	properdocs build -f mkdocs.yml
 
 deploy:
-	mkdocs gh-deploy --force
+	properdocs gh-deploy --force -f mkdocs.yml
 
 check test:
-	mkdocs build --strict
+	properdocs build --strict -f mkdocs.yml
 
 preview serve:
-	mkdocs serve
+	properdocs serve -f mkdocs.yml
